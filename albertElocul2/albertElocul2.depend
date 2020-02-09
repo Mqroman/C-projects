@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1524681293 source:c:\users\utilizator 5\documents\code blocks\albertelocul2\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<ctime>
+	<cstdlib>
+
+1524677693 source:c:\users\utilizator 5\desktop\proiecte\codeblocks code\albertelocul2\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<ctime>
+	<cstdlib>
+
