@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1524683668 source:c:\users\utilizator 5\documents\code blocks\spanzuratoarea\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<ctime>
+	<cstdlib>
+
+1524680068 source:c:\users\utilizator 5\desktop\proiecte\codeblocks code\spanzuratoarea -consola-\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<ctime>
+	<cstdlib>
+
