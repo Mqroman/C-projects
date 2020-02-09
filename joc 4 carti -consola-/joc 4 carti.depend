@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1524678825 source:c:\users\utilizator 5\desktop\proiecte\codeblocks code\joc 4 carti -consola-\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+
