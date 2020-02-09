@@ -1,0 +1,42 @@
+function caram(X,Y)
+{
+ xs1=X+af;ys1=Y-af;
+  xs2=X;ys2=Y;
+  xt2=X+w ;yt2=Y;
+  xt1=X+w+af;yt1=Y-af;
+  
+  x2t1=X+w+af;y2t1= Y-af;
+  x2s1=  X+w;y2s1=Y;
+  
+  x2s2=X+w;y2s2=Y+h;
+  x2t2=X+w+af;y2t2= Y+h-af;
+fill("green");
+      
+   
+  
+  rect(X, Y, w,h);
+
+  quad(xs2,ys2, xs1,ys1,xt1, yt1, xt2 , yt2);//sus
+        quad(x2s2,y2s2, x2s1,y2s1, x2t1, y2t1, x2t2 , y2t2);
+  ///caramita normala
+}
+
+function caram1(X,Y)
+{
+ xs1=X;ys1=Y+h;
+  xs2=X+af;ys2=Y+h+af;
+  xt2=X+w+af;yt2=Y+h+af;
+  xt1=X+w;yt1=Y+h;
+  
+  x2t1=X+w+af;y2t1=Y+af;
+  x2s1=  X+w;y2s1=Y;
+  x2s2=X+w;y2s2=Y+h;
+  x2t2=X+w+af;y2t2=Y+h+af;
+  
+fill("green");
+      
+          rect(X, Y, w,h);
+  quad(xs1,ys1, xs2,ys2,xt2, yt2, xt1 , yt1);//sus
+          quad(x2t1,y2t1, x2s1,y2s1, x2s2, y2s2, x2t2 , y2t2);
+  ///caramita in jos
+}

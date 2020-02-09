@@ -1,0 +1,725 @@
+ var n=6;//nr caramizilor
+
+var X=10,Y=330,w=60,h=w/3,  i,ok=1,g=Y,j;
+
+var x01=X,y01=Y,w01=w,h01=h;
+var culoare="#FF996",culoare1="black";
+
+var car1=1,car2=1,car3=1,car4=1,car5=1,car6=1,car7=1,car8=1,car9=1,car10=1,
+car11=1,car12=1,car13=1,car14=1,car15=1,car16=1,car17=1,car18=1,car19=1,car20=1,car21=1,car22=1,car23=1,car24=1,car25=1,car26=1,car27=1,car28=1,car29=1,car30=1,car31=1,car32=1,car33=1,car34=1,car35=1,car36=1,car37=1,car38=1,car39=1,car40=1,
+car41=1,car42=1,car43=1,car44=1,car45=1,car46=1,car47=1,car48=1,car49=1,car50=1,car51=1,car52=1,car53=1,car54=1,car55=1,car56=1,car57=1,car58=1,car59=1,car60=1,car61=1,car62=1,car63=1,car64=1,car65=1,car66=1,car67=1,car68=1,car69=1,car70=1,car71=1,car72=1,car73=1,car74=1,car75=1,car76=1,car77=1,car78=1,car79=1,car80=1,car81=1,car82=1,car83=1,car84=1,car85=1,car86=1,car87=1,car88=1,car89=1,car90=1,car91=1,car92=1,car93=1,car94=1,car95=1,car96=1,car97=1,car98=1,car99=1,car100=1;
+
+var X1=X+60,X2=X1+60,X3=X2+60,X4=X3+60,X5=X4+60,X6=X5+60,X7=X6+60,X8=X7+60
+,X9=X8+60,X10=X9+60;
+
+var Y1=Y-20,Y2=Y1-20,Y3=Y2-20,Y4=Y3-20,Y5=Y4-20,Y6=Y5-20,Y7=Y6-20,Y8=Y7-20
+,Y9=Y8-20,Y10=Y9-20;
+function setup() {
+   createCanvas(1000, 1000);
+
+ }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function caramida(X,Y)
+{
+ 
+fill(culoare);
+      
+          rect(X, Y, w,h);
+          quad(X,Y, X+10,Y-10,X+w+10, Y-10, X+w , Y);//sus
+          quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);
+}
+//////////////////////////////////////////////////////////////////////////
+function curs(X,Y)
+{
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y&&mouseY<Y+h&&car1==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y&&mouseY<Y+h&&car2==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y&&mouseY<Y+h&&car3==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y&&mouseY<Y+h&&car4==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y&&mouseY<Y+h&&car5==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y&&mouseY<Y+h&&car6==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y&&mouseY<Y+h&&car7==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y&&mouseY<Y+h&&car8==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y&&mouseY<Y+h&&car9==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y&&mouseY<Y+h&&car10==1)       
+          cursor(HAND);   else
+ //////////////////////////////////////////////////////////////////           
+       if (mouseX>X&&mouseX<X+w&&mouseY>Y-20&&mouseY<Y-20+h&&car11==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20&&mouseY<Y-20+h&&car12==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20&&mouseY<Y-20+h&&car13==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20&&mouseY<Y-20+h&&car14==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20&&mouseY<Y-20+h&&car15==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20&&mouseY<Y-20+h&&car16==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20&&mouseY<Y-20+h&&car17==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20&&mouseY<Y-20+h&&car18==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20&&mouseY<Y-20+h&&car19==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20&&mouseY<Y-20+h&&car20==1)       
+          cursor(HAND); else
+////////////////////////////////////////////////////////////////////////     
+       if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car21==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car22==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car23==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car24==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car25==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car26==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car27==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car28==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car29==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car30==1)       
+          cursor(HAND); else
+/////////////////////////////////////////////////////////////////////////    
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car31==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car32==1)
+          cursor(HAND);   else 
+ if(mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car33==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car34==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car35==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car36==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car37==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car38==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car39==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car40==1)       
+          cursor(HAND);         
+else /////////////////////////////////////////////////////////////////////////    
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car41==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car42==1)
+          cursor(HAND);   else 
+ if(mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car43==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car44==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car45==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car46==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car47==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car48==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car49==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car50==1)       
+          cursor(HAND);                
+ else /////////////////////////////////////////////////////////////////////////    
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car51==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car52==1)
+          cursor(HAND);   else 
+ if(mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car53==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car54==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car55==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car56==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car57==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car58==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car59==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car60==1)       
+          cursor(HAND); else
+ ////////////////////////////////////////////////////////////////////// 
+     if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car61==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car62==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car63==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car64==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car65==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car66==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car67==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car68==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car69==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car70==1)       
+          cursor(HAND); 
+   else //////////////////////////////////////////////////////////////////           
+     if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car71==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car72==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car73==1)
+          cursor(HAND);   else 
+if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car74==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car75==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car76==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*7&&mouseY<Y-20*7*7+h&&car77==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car78==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car79==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car80==1)       
+          cursor(HAND); else
+  //////////////////////////////////////////////////////////////////        
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car81==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car82==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car83==1)
+          cursor(HAND);   else 
+if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car84==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car85==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car86==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car87==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car88==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car89==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car90==1)       
+          cursor(HAND); 
+
+  else
+  ////////////////////////////////////////////////////////////////// 
+    //////////////////////////////////////////////////////////////////           
+       if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car91==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car92==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car93==1)
+          cursor(HAND);   else 
+if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car94==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car95==1)       
+         cursor(HAND);    else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car96==1)     cursor(HAND);   else
+
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car97==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car98==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car99==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car100==1)       
+          cursor(HAND); 
+        
+       
+ else cursor(CROSS);}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function draw() {
+   background(204);
+   curs(X1,Y);
+  
+////////////////////////primul strat jos////////////////////////////////
+   if(car1==1)	 caramida(X1,Y);
+   if(car2==1)	 caramida(X2,Y);
+     if(car3==1)	 caramida(X3,Y);
+   if(car4==1)	 caramida(X4,Y);
+  
+   if(car5==1)	 caramida(X5,Y);
+   if(car6==1)	 caramida(X6,Y);
+     if(car7==1)	 caramida(X7,Y);
+   if(car8==1)	 caramida(X8,Y);
+ 
+    if(car9==1)	 caramida(X9,Y);
+   if(car10==1)	 caramida(X10,Y);
+  //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 2 strat ////////////////////////////////
+   if(car11==1)	 caramida(X1,Y1);
+   if(car12==1)	 caramida(X2,Y1);
+     if(car13==1)	 caramida(X3,Y1);
+   if(car14==1)	 caramida(X4,Y1);
+  
+   if(car15==1)	 caramida(X5,Y1);
+   if(car16==1)	 caramida(X6,Y1);
+     if(car17==1)	 caramida(X7,Y1);
+   if(car18==1)	 caramida(X8,Y1);
+ 
+    if(car19==1)	 caramida(X9,Y1);
+   if(car20==1)	 caramida(X10,Y1);
+  //////////////////////////////////////////////////////////////////////
+   //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 3 strat ////////////////////////////////
+   if(car21==1)	 caramida(X1,Y2);
+   if(car22==1)	 caramida(X2,Y2);
+     if(car23==1)	 caramida(X3,Y2);
+   if(car24==1)	 caramida(X4,Y2);
+  
+   if(car25==1)	 caramida(X5,Y2);
+   if(car26==1)	 caramida(X6,Y2);
+     if(car27==1)	 caramida(X7,Y2);
+   if(car28==1)	 caramida(X8,Y2);
+ 
+    if(car29==1)	 caramida(X9,Y2);
+   if(car30==1)	 caramida(X10,Y2);
+  //////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 4 strat ////////////////////////////////
+   if(car31==1)	 caramida(X1,Y3);
+   if(car32==1)	 caramida(X2,Y3);
+     if(car33==1)	 caramida(X3,Y3);
+   if(car34==1)	 caramida(X4,Y3);
+  
+   if(car35==1)	 caramida(X5,Y3);
+   if(car36==1)	 caramida(X6,Y3);
+     if(car37==1)	 caramida(X7,Y3);
+   if(car38==1)	 caramida(X8,Y3);
+ 
+    if(car39==1)	 caramida(X9,Y3);
+   if(car40==1)	 caramida(X10,Y3);
+  //////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 5 strat ////////////////////////////////
+   if(car41==1)	 caramida(X1,Y4);
+   if(car42==1)	 caramida(X2,Y4);
+     if(car43==1)	 caramida(X3,Y4);
+   if(car44==1)	 caramida(X4,Y4);
+  
+   if(car45==1)	 caramida(X5,Y4);
+   if(car46==1)	 caramida(X6,Y4);
+     if(car47==1)	 caramida(X7,Y4);
+   if(car48==1)	 caramida(X8,Y4);
+ 
+    if(car49==1)	 caramida(X9,Y4);
+   if(car50==1)	 caramida(X10,Y4);
+   //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 6 strat ////////////////////////////////
+   if(car51==1)	 caramida(X1,Y5);
+   if(car52==1)	 caramida(X2,Y5);
+     if(car53==1)	 caramida(X3,Y5);
+   if(car54==1)	 caramida(X4,Y5);
+  
+   if(car55==1)	 caramida(X5,Y5);
+   if(car56==1)	 caramida(X6,Y5);
+     if(car57==1)	 caramida(X7,Y5);
+   if(car58==1)	 caramida(X8,Y5);
+ 
+    if(car59==1)	 caramida(X9,Y5);
+   if(car60==1)	 caramida(X10,Y5);
+ 
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 7 strat ////////////////////////////////
+   if(car61==1)	 caramida(X1,Y6);
+   if(car62==1)	 caramida(X2,Y6);
+     if(car63==1)	 caramida(X3,Y6);
+   if(car64==1)	 caramida(X4,Y6);
+  
+   if(car65==1)	 caramida(X5,Y6);
+   if(car66==1)	 caramida(X6,Y6);
+     if(car67==1)	 caramida(X7,Y6);
+   if(car68==1)	 caramida(X8,Y6);
+ 
+    if(car69==1)	 caramida(X9,Y6);
+   if(car70==1)	 caramida(X10,Y6);
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 8 strat ////////////////////////////////
+   if(car71==1)	 caramida(X1,Y7);
+   if(car72==1)	 caramida(X2,Y7);
+     if(car73==1)	 caramida(X3,Y7);
+   if(car74==1)	 caramida(X4,Y7);
+  
+   if(car75==1)	 caramida(X5,Y7);
+   if(car76==1)	 caramida(X6,Y7);
+     if(car77==1)	 caramida(X7,Y7);
+   if(car78==1)	 caramida(X8,Y7);
+ 
+    if(car79==1)	 caramida(X9,Y7);
+   if(car80==1)	 caramida(X10,Y7);
+  
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 9 strat ////////////////////////////////
+   if(car81==1)	 caramida(X1,Y8);
+   if(car82==1)	 caramida(X2,Y8);
+     if(car83==1)	 caramida(X3,Y8);
+   if(car84==1)	 caramida(X4,Y8);
+  
+   if(car85==1)	 caramida(X5,Y8);
+   if(car86==1)	 caramida(X6,Y8);
+     if(car87==1)	 caramida(X7,Y8);
+   if(car88==1)	 caramida(X8,Y8);
+ 
+    if(car89==1)	 caramida(X9,Y8);
+   if(car90==1)	 caramida(X10,Y8);
+     //////////////////////////////////////////////////////////////////////
+  ////////////////////////ultimul strat ////////////////////////////////
+   if(car91==1)	 caramida(X1,Y9);
+   if(car92==1)	 caramida(X2,Y9);
+     if(car93==1)	 caramida(X3,Y9);
+   if(car94==1)	 caramida(X4,Y9);
+  
+   if(car95==1)	 caramida(X5,Y9);
+   if(car96==1)	 caramida(X6,Y9);
+     if(car97==1)	 caramida(X7,Y9);
+   if(car98==1)	 caramida(X8,Y9);
+ 
+    if(car99==1)	 caramida(X9,Y9);
+   if(car100==1)	 caramida(X10,Y9);
+  //////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////
+ }
+function mousePressed()
+{ ////////////////////////caramizi primu strat////////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y&&mouseY<Y+h)
+  {car1=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y&&mouseY<Y+h)
+  {car2=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y&&mouseY<Y+h)
+  {car3=0; redraw();}
+  
+  if (mouseX>X4&&mouseX<X4+w&&mouseY>Y&&mouseY<Y+h)
+  {car4=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y&&mouseY<Y+h)
+  {car5=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y&&mouseY<Y+h)
+  {car6=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y&&mouseY<Y+h)
+  {car7=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y&&mouseY<Y+h)
+  {car8=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y&&mouseY<Y+h)
+  {car9=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y&&mouseY<Y+h)
+  {car10=0; redraw();}
+////////////////////////////////////////////////////////////////////////// ////////////////////////////caramizi al 2 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car11=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car12=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car13=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car14=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car15=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car16=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car17=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car18=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car19=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y1&&mouseY<Y1+h)
+  {car20=0; redraw();}
+  
+  /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 3 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car21=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car22=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car23=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car24=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car25=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car26=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car27=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car28=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car29=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y2&&mouseY<Y2+h)
+  {car30=0; redraw();}
+  
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 4 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car31=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car32=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car33=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car34=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car35=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car36=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car37=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car38=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car39=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y3&&mouseY<Y3+h)
+  {car40=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 5 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car41=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car42=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car43=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car44=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car45=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car46=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car47=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car48=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car49=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y4&&mouseY<Y4+h)
+  {car50=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 6 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car51=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car52=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car53=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car54=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car55=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car56=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car57=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car58=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car59=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y5&&mouseY<Y5+h)
+  {car60=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 7 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car61=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car62=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car63=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car64=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car65=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car66=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car67=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car68=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car69=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y6&&mouseY<Y6+h)
+  {car70=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 8 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car71=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car72=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car73=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car74=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car75=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car76=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car77=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car78=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car79=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y7&&mouseY<Y7+h)
+  {car80=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 9 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car81=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car82=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car83=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car84=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car85=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car86=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car87=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car88=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car89=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y8&&mouseY<Y8+h)
+  {car90=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////ultimul strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car91=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car92=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car93=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car94=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car95=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car96=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car97=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car98=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car99=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y9&&mouseY<Y9+h)
+  {car100=0; redraw();}
+  
+  /////////////////////////////////////////////////////////////////////
+ }

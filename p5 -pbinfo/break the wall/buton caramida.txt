@@ -1,0 +1,40 @@
+ function setup() {
+	createCanvas(400, 400);
+  
+}
+
+var X=60,Y=230,w=80,h=w/3;
+
+var culoare="#FF9966";
+function draw() {
+  
+	background("lightgray");
+ 
+
+ // rect(10, 100, 90, 30);
+ // X=10,Y=100,w=90,h=30
+ //
+  
+  //  X – coordonata X a col?ului stânga-sus;
+   // Y – coordonata Y a col?ului stânga-sus;
+  //  w – la?imea elipsei;
+   // h – înal?imea elipsei.
+fill(culoare);
+
+ 
+ //////////caramizi te inceput si final//////////////////////
+
+    rect(X, Y, w,h);
+  quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);
+  quad(X,Y, X+10,Y-10,X+w+10, Y-10, X+w , Y);
+//////////////////////////////////////////////////////////////
+
+ 
+}
+function mousePressed() {
+ 
+ culoare="lightblue";   X=X+3;Y=Y-8;redraw();
+}
+function mouseReleased() {
+ culoare="#FF9966";   X=X-3;Y=Y+8; redraw();
+}

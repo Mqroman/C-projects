@@ -1,0 +1,65 @@
+function setup() {
+	createCanvas(1000, 1000);
+  	background("lightgray");
+}
+var n=10;//nr caramizilor
+
+var X=10,Y=330,w=60,h=w/3,i,ok=1,g=Y,j;
+var y0=Y-20*(n-1),w0=w*(n+1),h0=w0/3-h;
+
+var x01=X,y01=y0,w01=w,h01=h;
+
+function caram(X,Y)
+  {
+    h=w/3;
+    for(i=1;i<=n;i++)
+    {X=X+60;
+      
+      for(j=1;j<=n;j++)
+      {  
+        if(i==n&&j!=n)  
+        {  rect(X, Y, w,h);
+          quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);}//-->
+    else
+        if(i==n&&j==n)  
+        {  rect(X, Y, w,h);
+          quad(X,Y, X+10,Y-10,X+w+10, Y-10, X+w , Y);//sus
+          quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);}//-->  
+         
+        else
+         if(j==n)
+{
+  rect(X, Y, w,h);
+   
+  quad(X,Y, X+10,Y-10,X+w+10, Y-10, X+w , Y);//sus
+      
+} 
+       else  if(i==n)  
+        {  rect(X, Y, w,h);
+          quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);} 
+       
+ else 
+ {
+   rect(X, Y, w,h);
+   }
+    
+         
+         
+        if(j==n)Y=g;
+       else
+        Y=Y-20;
+      }
+    }
+  }
+  
+function draw() {
+
+  
+  fill("#FF9966");
+  strokeWeight(1);
+
+
+caram(X,Y);
+ if (mouseX>X&&mouseX<X+w0&&mouseY>y0&&mouseY<y0+h0)
+        cursor(HAND); else cursor(CROSS);
+}

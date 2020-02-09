@@ -1,0 +1,109 @@
+var X=10,Y=330,w=60,h=w/3,  i,ok=1,g=Y,j;
+
+var X1=X+60,X2=X1+60,X3=X2+60,X4=X3+60,X5=X4+60,X6=X5+60,X7=X6+60,X8=X7+60
+,X9=X8+60,X10=X9+60;
+
+var Y1=Y-20,Y2=Y1-20,Y3=Y2-20,Y4=Y3-20,Y5=Y4-20,Y6=Y5-20,Y7=Y6-20,Y8=Y7-20
+,Y9=Y8-20,Y10=Y9-20;
+ var mk0=new tter(X1,Y);
+var car1=1;
+var af=10;
+function setup() {
+   createCanvas(1000, 1000);}
+
+
+function caram(X,Y)
+{
+ xs1=X+af;ys1=Y-af;
+  xs2=X;ys2=Y;
+  xt2=X+w ;yt2=Y;
+  xt1=X+w+af;yt1=Y-af;
+  
+  x2t1=X+w+af;y2t1= Y-af;
+  x2s1=  X+w;y2s1=Y;
+  
+  x2s2=X+w;y2s2=Y+h;
+  x2t2=X+w+af;y2t2= Y+h-af;
+fill("green");
+      
+   
+  
+  rect(X, Y, w,h);
+
+  quad(xs2,ys2, xs1,ys1,xt1, yt1, xt2 , yt2);//sus
+        quad(x2s2,y2s2, x2s1,y2s1, x2t1, y2t1, x2t2 , y2t2);
+  
+}
+
+function caram1(X,Y)
+{
+ xs1=X;ys1=Y+h;
+  xs2=X+af;ys2=Y+h+af;
+  xt2=X+w+af;yt2=Y+h+af;
+  xt1=X+w;yt1=Y+h;
+  
+  x2t1=X+w+af;y2t1=Y+af;
+  x2s1=  X+w;y2s1=Y;
+  x2s2=X+w;y2s2=Y+h;
+  x2t2=X+w+af;y2t2=Y+h+af;
+  
+fill("green");
+      
+          rect(X, Y, w,h);
+  quad(xs1,ys1, xs2,ys2,xt2, yt2, xt1 , yt1);//sus
+          quad(x2t1,y2t1, x2s1,y2s1, x2s2, y2s2, x2t2 , y2t2);
+  
+}
+
+
+///////////////////////////////////////////////
+function draw() {
+    background(50, 89, 100);  caram1(X4,Y4);
+  if(car1==1)
+caram(X1,Y);
+
+
+  else { mk0.move();
+   mk0.display();}
+}
+function mousePressed()
+{ ////////////////////////caramizi primu strat////////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car1==1)car1=0; redraw();}
+
+  }
+   
+   /////////////////////////////////////////////
+
+function tter(a1,b1)
+{
+  this.x = a1;
+  this.y = b1;
+xs1=a1;ys1=b1+h;
+  xs2=a1+af;ys2=b1+h+af;
+  xt2=a1+w+af;yt2=b1+h+af;
+  xt1=a1+w;yt1=b1+h;
+  
+  x2t1=a1+w+af;y2t1=b1+af;
+  x2s1=  a1+w;y2s1=b1;
+  x2s2=a1+w;y2s2=b1+h;
+  x2t2=a1+w+af;y2t2=b1+h+af;
+
+  this.move = function() 
+  {
+
+   if(this.x<a1+10&&this.y<b1+115)
+   {af=0;
+    this.x +=0.2;
+  this.y += 1.7;
+   }
+  };
+     this.display = function() 
+     {  
+       fill("lightgray");
+     rect( this.x,this.y, w,h);
+   quad(this.x+w,this.y+h, this.x+w,this.y, this.x+w+af, this.y-af, this.x+w+af , this.y+h-af);
+    quad(this.x,this.y, this.x+af,this.y-af,this.x+w+af, this.y-af, this.x+w , this.y);
+     };
+  };
+ 

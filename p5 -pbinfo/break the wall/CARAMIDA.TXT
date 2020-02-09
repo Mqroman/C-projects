@@ -1,0 +1,36 @@
+function setup() {
+	createCanvas(400, 400);
+  	background("lightgray");
+}
+
+var X=60,Y=230,w=80,h;
+function draw() {
+
+  fill("dark"); 
+  fill(220, 220 , 220, 0);
+  strokeWeight(1);
+
+ // rect(10, 100, 90, 30);
+ // X=10,Y=100,w=90,h=30
+ //
+  
+  //  X – coordonata X a col?ului stânga-sus;
+   // Y – coordonata Y a col?ului stânga-sus;
+  //  w – la?imea elipsei;
+   // h – înal?imea elipsei.
+
+  
+  
+ //////////caramizi te inceput si final//////////////////////
+  h=w/3;
+    rect(X, Y, w,h);
+  quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);
+  quad(X,Y, X+10,Y-10,X+w+10, Y-10, X+w , Y);
+//////////////////////////////////////////////////////////////
+
+//////////////caramizi te mijloc////////////////////////
+  h=w/3;
+    rect(X, Y, w,h);
+  quad(X+w,Y+h, X+w,Y, X+w+10, Y-10, X+w+10 , Y+h-10);
+//////////////////////////////////////////////////////
+}

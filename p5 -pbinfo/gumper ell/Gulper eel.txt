@@ -1,0 +1,606 @@
+function setup() {
+	createCanvas(400, 400);
+  	angleMode(DEGREES);
+  	frameRate(20);
+}
+
+var peste1=0,peste2=0,peste3=0,peste4=0,supeste1=0;
+var peste1a=0,peste2a=0,peste3a=0,peste4a=0,supeste=0;
+var ss=0.02,sss=3;
+var PY=10,PX=37;
+
+var xm = 148, ym =400;
+var xm1 = 278, ym1 = 0;
+var xm2 = 48, ym2 =0;
+var xm3 = 28, ym3 =400;
+var xm7 = 78, ym7 = 0;
+
+
+var zx=0;
+var gh=2;
+
+var x = 100 , y = 370;
+var dir = 1;
+
+var cnt = 0,cnt1=0;
+var s = 2;
+var xe = 10, ye = 10;
+
+var ppp=true;
+var pornit = false;
+
+var value ="#339999";
+
+var sX = 200, sY = 200;
+var unghiP = 180, dUnghiP = -1;
+var unghiL = -45, dUnghiL = -1;
+var raza_p = 150, raza_l = 30;
+
+
+
+function mousePressed()
+{
+    if (mouseX>10&&mouseX<150&&mouseY>200&&mouseY<240&&gh==2)
+{  pornit = true;
+ noCursor();}
+  else
+  if (mouseX>10&&mouseX<150&&mouseY>200&&mouseY<240&&gh!=2&&pornit==false)
+{ ppp=true;
+  supeste1=supeste=0;
+  peste1a=peste1=0;
+  peste2a=peste2=0;
+  peste3a=peste3=0;
+  peste4a=peste4=0;
+ 
+ xm = 148; ym =400;
+ xm1 = 278; ym1 = 0;
+ xm2 = 48; ym2 =0;
+ xm3 = 28; ym3 =400;
+ xm7 = 78; ym7 = 0;
+
+  
+  
+  pornit = true;
+  noCursor();
+}
+  
+ else 
+     if (mouseX>10&&mouseX<150&&mouseY>155&&mouseY<180&&gh!=2&&ppp==true)
+{
+ppp = false;
+}
+ else
+    if (mouseX>10&&mouseX<150&&mouseY>155&&mouseY<180&&gh!=2&&ppp==false)
+{
+ppp = true;
+}
+}
+
+function draw() {
+  
+   sss=ss+0,1;
+  
+////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////fundal///////////////////////
+  ///////////////////////////////////////////////////////////////////
+     background("blue"); 
+  
+     fill("darkblue");
+  stroke("darkblue");
+  	rect(0, 330, 800, 840);
+    
+   fill("darkgreen");
+  stroke("darkgreen");
+  	triangle(0,330, 800, 350, 250, 300);
+  
+  fill("darkblue");
+  stroke("darkblue");
+  	triangle(0,330, 800, 350, 50, 300);
+  
+   fill("darkblue");
+  stroke("darkblue");
+  	triangle(300,50, 350,0, 280, 0);
+//////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////miscare tentacule///////////////////////
+  ///////////////////////////////////////////////////////////////////
+  
+  var pX = sX + raza_p * cos(unghiP), pY = sY + raza_p * sin(unghiP);
+	var lX = pX + raza_l * cos(2*unghiL), lY = pY + raza_l *
+ sin(2*unghiL);  
+  
+  unghiP += 0.5;
+  	unghiL += 10.00;
+     
+
+////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////caracatita///////////////////////
+  ///////////////////////////////////////////////////////////////////
+
+
+
+stroke("lightgreen"); 
+  	strokeWeight(2);
+ fill(220, 220 , 220, 0);
+  bezier( mouseX, mouseY+12,// prima ancora
+           100, pX+1, // primul punct de control
+           pY, pX+200-lY, // al doilea pucnt de control
+           lY+85,lX+56	 // a doua ancora
+          );
+  
+ stroke("lightgreen"); // culoare negru pentru linie
+  	strokeWeight(2);
+ fill(220, 220 , 220, 0);
+  bezier(mouseX, mouseY+12, // prima ancora
+           200, lX+1, // primul punct de control
+           lX, pX+10, // al doilea pucnt de control
+            lX, lX	 // a doua ancora
+          );
+ 
+  stroke("lightgreen"); // culoare negru pentru linie
+  	strokeWeight(2);
+ fill(220, 220 , 220, 0);
+  bezier( mouseX,mouseY+12,// prima ancora
+           250, pX+1, // primul punct de control
+           pX, pX+100, // al doilea pucnt de control
+          lY, pX	 // a doua ancora
+          );
+  
+
+  
+  stroke("lightgreen"); // culoare negru pentru linie
+  	strokeWeight(2);
+ fill(220, 220 , 220, 0);
+  bezier(mouseX, mouseY+12, // prima ancora
+           200, lX+1, // primul punct de control
+           pX, pX+100, // al doilea pucnt de control
+           lX-43,pY	 // a doua ancora
+          );
+
+  
+  stroke("green");
+  	strokeWeight(10);
+  	point(lY, pX);
+  
+  stroke("#660066");
+  	strokeWeight(10);
+  	point(lX, lX);
+  
+  stroke("green");
+  	strokeWeight(10);
+  	point(lX-43, pY);
+  	
+  	stroke("#660066");
+  	strokeWeight(10);
+  	point(lY+85, lX+56);
+ 
+  	 
+  stroke("#660066");
+  	strokeWeight(25+sss) ;
+   point(mouseX, mouseY+12) ;
+     
+   ///////////////////////////////////////////////////////////////////////
+  /////////////////////////meduza caracatita//////////////////////////////
+  /////////////////////////////////////////////////////////////////////
+  fill(220, 220 , 220, 0);
+  stroke("lightgreen");strokeWeight(2) ;
+    ellipse(mouseX, mouseY+12, 62+sss, 62+sss); // un cerc
+   ellipse(mouseX, mouseY+12, 57+sss, 57+sss); // un cerc
+  ////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////prima pagina///////////////////////
+  ///////////////////////////////////////////////////////////////////
+  fill("darkblue");
+  
+  
+  	if(!pornit)
+{
+     
+ //////////////////////////cursor////////////////////////
+   if (mouseX>10&&mouseX<150&&mouseY>200&&mouseY<240) 
+    cursor(HAND);   
+    else noCursor();
+
+      
+        fill("darkblue");
+  stroke("darkblue");
+  	rect(0, 330, 800, 840);
+    
+   fill("darkgreen");
+  stroke("darkgreen");
+  	triangle(0,330, 800, 350, 250, 300);
+  
+  fill("darkblue");
+  stroke("darkblue");
+  	triangle(0,330, 800, 350, 50, 300);
+  
+   fill("darkblue");
+  stroke("darkblue");
+  	triangle(300,50, 350,0, 280, 0);fill("yellow");
+  
+  /////////////////////////////////////////////////////////
+        
+        fill("darkblue");stroke("lightgreen");
+        rect(10, 200, 140, 40,5);
+            fill("yellow");
+            noStroke();
+ if(gh==2)
+ text("Porneste jocul", 40, 222);
+ ///////////////////////////////////////////////////////// 
+
+      else {    
+        if (mouseX>10&&mouseX<150&&mouseY>200&&mouseY<240) 
+    cursor(HAND);   
+    else 
+        if (mouseX>10&&mouseX<150&&mouseY>155&&mouseY<180)
+          cursor(HAND);   
+        else noCursor();
+                       
+ ///////////////////////casuta statistici/////////////////////////     
+         fill("darkblue");
+           stroke("lightgreen");
+           rect(10, 155, 140, 40,5);
+           fill("yellow");
+           noStroke();
+           text("Statistici", 53, 178);
+  ///////////////////////////////////////////////////////////////////    
+
+   ///////////////////////////casuta reporneste joc////////////////   
+       
+            fill("yellow");
+            noStroke();
+            text("Reporneste jocul", 34, 222);
+        
+  fill("darkblue"); 
+  stroke("lightgreen")
+  rect(194,19, 107, 36,5);
+           
+  fill("yellow");
+  noStroke();
+  text("Scorul Tau: "+cnt1, 210, 40);}
+         
+          if(!ppp)
+        {   
+           fill("darkblue");
+                   stroke("lightgreen");
+                   rect(130, 98, 178, 40,5); 
+                   fill("yellow");
+                   noStroke();
+                   text("Stagiu peste:", 151, 120);
+          
+          
+             stroke("lightgreen");
+          fill("darkblue");
+  rect(204, 155, 120, 80,5);
+          
+ fill("yellow");
+ noStroke();
+      
+        text("Peste albastru: "+peste1a, 210, 170);
+        text("Peste galben: "+peste2a, 210, 185);
+        text("Peste rosu: "+peste3a, 210, 200);
+        text("Peste maro: "+peste4a, 210, 215);
+        text("Super peste: "+supeste1, 210, 230);
+      
+        fill("yellow");
+        noStroke();
+        if(cnt1>=200)   text("Gulper eel", 230, 120);    
+        if(cnt1<=5)  text("Ghibort", 230, 120);
+        if(cnt1<=15&&cnt1>5)  text("Lebetus", 230, 120);  
+        if(cnt1<=30&&cnt1>15)  text("Murgoi baltat", 230, 120);
+        if(cnt1<=50&&cnt1>30)  text("Raspar", 230, 120);
+        if(cnt1<=80&&cnt1>50)  text("Lostrita", 230, 120);
+        if(cnt1<=100&&cnt1>80)  text("Epinephelus ", 230, 120);
+        if(cnt1<=150&&cnt1>100)  text("Arapaima ", 230, 120);
+        if(cnt1<=200&&cnt1>150)  text("Catlocarpio ", 230, 120);
+      
+        }
+      return;
+    }
+
+gh=3;
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+ 
+  ////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////pestele1///////////////////////
+  ///////////////////////////////////////////////////////////////////
+  { 
+    fill("yellow");
+    strokeWeight(70) ; 
+    stroke(220, 220 , 220, 0);
+  
+   if(abs(ym - mouseX) <PY && abs(xm-mouseY) < PX)
+    {
+              peste1++;peste1a=peste1;
+    	cnt ++;
+      cnt1=cnt;
+       if(cnt%50==0)zx=1;
+              ss+=0.1;
+              PY=PY+0.001;  PX=PX+0.001;
+      	ym = 390;
+
+      	if(s<8)
+      		s += 0.1;
+      	xm = random(50, 350);
+    }
+
+  	if(ym < 0)
+    {
+      	ym = 390;
+              ss=0.02;
+              peste1=0;
+      	s = 2;
+      	xm = random(50, 350);
+        cnt = 0;
+      	
+      	pornit = false;
+      	return;
+    }
+  
+  	push(); 
+           
+            fill("#6699FF");
+            ellipse(ym,xm,20,10);
+  
+  	pop();
+  	 
+              text(cnt, 20 ,30);
+  	ym-=s;xm=xm+random(-1,1);
+              angleMode(DEGREES);
+            
+              fill("#66FFFF");
+  	arc(ym+13, xm , 13, 13, 45, 315, PIE);
+  }
+  
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+  
+  
+  
+  ////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////pestele2///////////////////////
+  ///////////////////////////////////////////////////////////////////
+  if(s>3)
+{
+    fill("yellow");
+    strokeWeight(70) ; 
+ 
+    stroke(220, 220 , 220, 0);
+  
+  if(abs(ym1 - mouseX) <PY && abs(xm1-mouseY) < PX)
+    {
+              peste2++;peste2a=peste2;
+    	cnt ++;
+              ss+=0.5;
+              cnt1=cnt;
+        if(cnt%50==0)zx=1;
+      	ym1 = 0;
+      	if(s<8)
+      		s += 0.1;
+      	xm1 = random(50, 350);	
+
+    } 
+  	if(ym1 > 399)
+    {
+      	ym1 = 0;
+              ss=0.02;
+              peste2=0;
+      	s = 2;
+      	xm1 = random(50, 350);
+              cnt = 0;
+      	
+      	pornit = false;
+      	return;
+    }
+  
+        fill("#FFCC66");
+  	push();
+        ellipse(ym1,xm1,20,10);
+  	pop();
+        ym1+=s;xm1=xm1+random(-1,1);
+     
+        fill("#CCCC66");
+        angleMode(DEGREES);
+  	arc(ym1-12, xm1 , 13, 13, -45, 315, PIE);
+  }
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+  
+  
+ ////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////pestele3///////////////////////
+  ///////////////////////////////////////////////////////////////////
+  if(s>6)
+{
+    fill("yellow");
+    strokeWeight(70) ; 
+ 
+    stroke(220, 220 , 220, 0);
+  
+  if(abs(ym2 - mouseX) <PY && abs(xm2-mouseY) < PX)
+    {
+              peste3++;peste3a=peste3;
+    	cnt ++; 
+              ss+=0.6;
+              cnt1=cnt;
+      	ym2 = 0;
+    if(cnt%50==0)zx=1;
+      	if(s<8)
+      		s += 0.1;
+      	xm2 = random(50, 350);	
+
+    } 
+  	if(ym2 > 399)
+    {
+      	ym2 = 0;
+              ss=0.02;
+              peste3=0;
+      	s = 2;
+      	xm2 = random(50, 350);
+              cnt = 0;
+      	
+      	pornit = false;
+      	return;
+    }
+   
+         fill("#990000");
+  	push();
+         ellipse(ym2,xm2,20,10);
+  	pop();ym2+=s;xm2=xm2+random(-1,1);
+         gh=random(50,350);
+         stroke("#003333"); 
+         strokeWeight(2);
+         fill(220, 220 , 220, 0);
+  
+  bezier(ym2, xm2, 
+           ym2+10, xm2+20, 
+           ym2-45, xm2+10-43, 
+           ym2-20, xm2-10	 
+          );	
+    bezier(ym2, xm2, 
+           ym2+10, xm2+10, 
+           ym2-15, xm2+10-4, 
+           ym2-20, xm2-10	 
+          );	
+angleMode(DEGREES);gh=random(50,350);
+  fill("#CC0033");stroke("#003333");
+  	arc(ym2+10, xm2 , 13, 13, 45, 315, PIE);
+  
+  }
+  
+  ///////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////
+ 
+ ////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////pestele4///////////////////////
+  ///////////////////////////////////////////////////////////////////
+  if(cnt>100)
+{
+    fill("yellow");
+    strokeWeight(70) ; 
+ 
+    stroke(220, 220 , 220, 0);
+  
+  if(abs(ym3 - mouseX) <PY && abs(xm3-mouseY) < PX)
+    {
+              peste4++;peste4a=peste4;
+    	cnt=cnt+2;
+              ss+=0.8;
+              cnt1=cnt;
+      	ym3 = 390;
+          if(cnt%50==0)zx=1;
+      	if(s<8)
+      		s += 0.1;
+      	xm3 = random(50, 350);
+    
+    }
+ 
+  	if(ym3 < 0)
+    {
+      	ym3 = 390;
+              ss=0.02;
+              peste4=0;
+      	s = 2;
+      	xm3 = random(50, 350);
+              cnt = 0;
+      	
+      	pornit = false;
+      	return;
+    }
+   
+       fill("#333300");
+  	push();
+       ellipse(ym3,xm3,20,10);
+  	pop();
+  ym3-=s;
+  xm3=xm3+random(-1,1);
+       gh=random(50,350);
+       stroke(gh); 
+       strokeWeight(2);
+       fill(220, 220 , 220, 0);
+  
+  bezier(ym3, xm3, 
+           ym3+10, xm3+20, 
+           ym3-13, xm3+14,
+           ym3-20, xm3-20	
+          );	
+
+   angleMode(DEGREES);gh=random(50,350);
+  fill(gh);
+  	arc(ym3+12, xm3 , 13, 13, 45, 315, PIE);
+  
+  }
+
+        ////////////////////////////////////////////////////////////
+////////////////////superpeste//////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+   if(zx==1) 
+
+ { 
+
+   
+  if(abs(ym7 - mouseY) <10 && abs(xm7-mouseX) < 32 + 5)
+    {   
+       
+    	cnt =cnt+10;
+        cnt1=cnt;
+        zx=0;
+        supeste++;
+        supeste1=supeste;
+      	ym7 = -30;	
+      	xm7 = random(50, 350); 
+    }
+  	
+  		if(ym7 > 399)
+    {zx=0;
+      	ym7 = -30;
+      	xm7 = random(50, 350);
+
+    }
+   
+  	push();
+   
+ /////////////////////////////////////////
+  	 stroke(random(50,400));
+   strokeWeight(2);
+       fill(220, 220 , 220, 0);
+  bezier(xm7, ym7, 
+           xm7+10, ym7+20, 
+           xm7+13, ym7-14,
+           xm7-20, ym7-20	
+          );	
+   bezier(xm7, ym7, 
+           xm7+20, ym7+20, 
+           xm7-13, ym7-24,
+           xm7+20, ym7-20	
+          );	
+  
+  fill("#669999");	
+  ellipse(xm7,ym7,14,14);
+  	ellipse(xm7+10,ym7,14,14);
+  ellipse(xm7,ym7+5,24,14);
+  	ellipse(xm7+10,ym7+5,24,14);
+  
+  
+  	ellipse(xm7,ym7+11,14,14);
+  	ellipse(xm7+10,ym7+11,14,14);
+  
+  
+
+  
+  pop();
+  
+text(cnt, 20 ,30);
+  	ym7+=s;}
+  ///////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////
+
+  
+  
+  
+}
+
+  

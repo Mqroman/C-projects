@@ -1,0 +1,2198 @@
+var az;
+var tip=2;//tipu zidului
+var n=10;//nr randuri//inaltime
+var col=10;//nr coloane//latime
+var X=10,Y=330,w=60,h=w/3,  i,ok=1,g=Y,j;
+var a1,b1;
+var x01=X,y01=Y,w01=w,h01=h;
+var culoare="#FF9966",culoare1="black";
+var af=8;
+
+var car1=1,car2=1,car3=1,car4=1,car5=1,car6=1,car7=1,car8=1,car9=1,car10=1,
+car11=1,car12=1,car13=1,car14=1,car15=1,car16=1,car17=1,car18=1,car19=1,car20=1,car21=1,car22=1,car23=1,car24=1,car25=1,car26=1,car27=1,car28=1,car29=1,car30=1,car31=1,car32=1,car33=1,car34=1,car35=1,car36=1,car37=1,car38=1,car39=1,car40=1,
+car41=1,car42=1,car43=1,car44=1,car45=1,car46=1,car47=1,car48=1,car49=1,car50=1,car51=1,car52=1,car53=1,car54=1,car55=1,car56=1,car57=1,car58=1,car59=1,car60=1,car61=1,car62=1,car63=1,car64=1,car65=1,car66=1,car67=1,car68=1,car69=1,car70=1,car71=1,car72=1,car73=1,car74=1,car75=1,car76=1,car77=1,car78=1,car79=1,car80=1,car81=1,car82=1,car83=1,car84=1,car85=1,car86=1,car87=1,car88=1,car89=1,car90=1,car91=1,car92=1,car93=1,car94=1,car95=1,car96=1,car97=1,car98=1,car99=1,car100=1;
+
+var X1=X+60,X2=X1+60,X3=X2+60,X4=X3+60,X5=X4+60,X6=X5+60,X7=X6+60,X8=X7+60
+,X9=X8+60,X10=X9+60;
+
+var Y1=Y-20,Y2=Y1-20,Y3=Y2-20,Y4=Y3-20,Y5=Y4-20,Y6=Y5-20,Y7=Y6-20,Y8=Y7-20
+,Y9=Y8-20,Y10=Y9-20;
+
+var x1=X1+az,x2=X2+az,x3=X3+az,x4=X4+az,x5=X5+az,x6=X6+az,x7=X7+az,x8=X8+az;x9=X9+az,x10=X10+az;
+
+if(tip==2)az=30;else az=0;
+  var mk0=new tter(X1,Y);
+var mk1=new tter(X2,Y);
+var mk2=new tter(X3,Y);
+var mk3=new tter(X4,Y);
+var mk4=new tter(X5,Y);
+var mk5=new tter(X6,Y);
+var mk6=new tter(X7,Y);
+var mk7=new tter(X8,Y);
+var mk8=new tter(X9,Y);
+var mk9=new tter(X10,Y);
+
+var mk10=new tter(X1+az,Y1);
+var mk11=new tter(X2+az,Y1);
+var mk12=new tter(X3+az,Y1);
+var mk13=new tter(X4+az,Y1);
+var mk14=new tter(X5+az,Y1);
+var mk15=new tter(X6+az,Y1);
+var mk16=new tter(X7+az,Y1);
+var mk17=new tter(X8+az,Y1);
+var mk18=new tter(X9+az,Y1);
+var mk19=new tter(X10+az,Y1);
+
+var mk20=new tter(X1,Y2);
+var mk21=new tter(X2,Y2);
+var mk22=new tter(X3,Y2);
+var mk23=new tter(X4,Y2);
+var mk24=new tter(X5,Y2);
+var mk25=new tter(X6,Y2);
+var mk26=new tter(X7,Y2);
+var mk27=new tter(X8,Y2);
+var mk28=new tter(X9,Y2);
+var mk29=new tter(X10,Y2);
+
+var mk30=new tter(X1+az,Y3);
+var mk31=new tter(X2+az,Y3);
+var mk32=new tter(X3+az,Y3);
+var mk33=new tter(X4+az,Y3);
+var mk34=new tter(X5+az,Y3);
+var mk35=new tter(X6+az,Y3);
+var mk36=new tter(X7+az,Y3);
+var mk37=new tter(X8+az,Y3);
+var mk38=new tter(X9+az,Y3);
+var mk39=new tter(X10+az,Y3);
+
+var mk40=new tter(X1,Y4);
+var mk41=new tter(X2,Y4);
+var mk42=new tter(X3,Y4);
+var mk43=new tter(X4,Y4);
+var mk44=new tter(X5,Y4);
+var mk45=new tter(X6,Y4);
+var mk46=new tter(X7,Y4);
+var mk47=new tter(X8,Y4);
+var mk48=new tter(X9,Y4);
+var mk49=new tter(X10,Y4);
+
+var mk50=new tter(X1+az,Y5);
+var mk51=new tter(X2+az,Y5);
+var mk52=new tter(X3+az,Y5);
+var mk53=new tter(X4+az,Y5);
+var mk54=new tter(X5+az,Y5);
+var mk55=new tter(X6+az,Y5);
+var mk56=new tter(X7+az,Y5);
+var mk57=new tter(X8+az,Y5);
+var mk58=new tter(X9+az,Y5);
+var mk59=new tter(X10+az,Y5);
+
+var mk60=new tter(X1,Y6);
+var mk61=new tter(X2,Y6);
+var mk62=new tter(X3,Y6);
+var mk63=new tter(X4,Y6);
+var mk64=new tter(X5,Y6);
+var mk65=new tter(X6,Y6);
+var mk66=new tter(X7,Y6);
+var mk67=new tter(X8,Y6);
+var mk68=new tter(X9,Y6);
+var mk69=new tter(X10,Y6);
+
+var mk70=new tter(X1+az,Y7);
+var mk71=new tter(X2+az,Y7);
+var mk72=new tter(X3+az,Y7);
+var mk73=new tter(X4+az,Y7);
+var mk74=new tter(X5+az,Y7);
+var mk75=new tter(X6+az,Y7);
+var mk76=new tter(X7+az,Y7);
+var mk77=new tter(X8+az,Y7);
+var mk78=new tter(X9+az,Y7);
+var mk79=new tter(X10+az,Y7);
+
+var mk80=new tter(X1,Y8);
+var mk81=new tter(X2,Y8);
+var mk82=new tter(X3,Y8);
+var mk83=new tter(X4,Y8);
+var mk84=new tter(X5,Y8);
+var mk85=new tter(X6,Y8);
+var mk86=new tter(X7,Y8);
+var mk87=new tter(X8,Y8);
+var mk88=new tter(X9,Y8);
+var mk89=new tter(X10,Y8);
+
+var mk90=new tter(X1+az,Y9);
+var mk91=new tter(X2+az,Y9);
+var mk92=new tter(X3+az,Y9);
+var mk93=new tter(X4+az,Y9);
+var mk94=new tter(X5+az,Y9);
+var mk95=new tter(X6+az,Y9);
+var mk96=new tter(X7+az,Y9);
+var mk97=new tter(X8+az,Y9);
+var mk98=new tter(X9+az,Y9);
+var mk99=new tter(X10+az,Y9);
+
+
+
+function setup() {
+   createCanvas(1000, 1000);
+if(n==9)
+{
+  car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2;
+}
+  else
+  if(n==8)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2;   car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;    }
+   else
+  if(n==7)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;  
+  
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,car79=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+  } 
+    else
+  if(n==6)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;   
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+    
+    car7=2;car17=2,car27=2,car37=2;car47=2,car57=2,car61=2,car62=2,car63=2;car64=2,car65=2,car66=2,car67=2;
+  } 
+    else
+  if(n==5)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;   
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+    
+    car7=2;car17=2,car27=2,car37=2;car47=2,car57=2,car61=2,car62=2,car63=2;car64=2,car65=2,car66=2,car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2,car51=2;car52=2,car53=2,car54=2;car55=2,car56=2;
+  } 
+    else
+  if(n==4)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;   
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+    
+    car7=2;car17=2,car27=2,car37=2;car47=2,car57=2,car61=2,car62=2,car63=2;car64=2,car65=2,car66=2,car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2,car51=2;car52=2,car53=2,car54=2;car55=2,car56=2;car5=2,car15=2,car25=2,car35=2;
+    car41=2,car42=2,car43=2,car44=2,car45=2;
+  } 
+    else
+  if(n==3)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;   
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+    
+    car7=2;car17=2,car27=2,car37=2;car47=2,car57=2,car61=2,car62=2,car63=2;car64=2,car65=2,car66=2,car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2,car51=2;car52=2,car53=2,car54=2;car55=2,car56=2;car5=2,car15=2,car25=2,car35=2;
+    car41=2,car42=2,car43=2,car44=2,car45=2;car4=2,car14=2;car24=2;car31=2,car32=2,car33=2,car34=2;
+  } 
+   else
+  if(n==2)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;   
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+    
+    car7=2;car17=2,car27=2,car37=2;car47=2,car57=2,car61=2,car62=2,car63=2;car64=2,car65=2,car66=2,car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2,car51=2;car52=2,car53=2,car54=2;car55=2,car56=2;car5=2,car15=2,car25=2,car35=2;
+    car41=2,car42=2,car43=2,car44=2,car45=2;car4=2,car14=2;car24=2;car31=2,car32=2,car33=2,car34=2;car3=2,car13=2,car21=2,car22=2,car23=2;
+  } 
+    else
+  if(n==1)
+  {
+    car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+    car91=2;car92=2;car93=2;car94=2;car95=2;car96=2;car97=2;car98=2;car99=2; 
+    car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+    car80=2;car81=2;car82=2;car83=2;car84=2;car85=2;car86=2;car87=2;car88=2;car89=2;   
+  car8=2,car18=2,car28=2,car38=2,car48=2,car58=2,car68=2,car78=2,
+  car71=2,car72=2,car73=2,car74=2,car75=2,car76=2;car77=2;
+    
+    car7=2;car17=2,car27=2,car37=2;car47=2,car57=2,car61=2,car62=2,car63=2;car64=2,car65=2,car66=2,car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2,car51=2;car52=2,car53=2,car54=2;car55=2,car56=2;car5=2,car15=2,car25=2,car35=2;
+    car41=2,car42=2,car43=2,car44=2,car45=2;car4=2,car14=2;car24=2;car31=2,car32=2,car33=2,car34=2;car3=2,car13=2,car21=2,car22=2,car23=2;car2=2,car11=2,car12=2;
+  } 
+  if(col==9)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+     }
+if(n==8)
+    {
+car9=1;car19=1;car29=1;car39=1;car49=1;car59=1;car69=1;car79=1;
+     }
+    if(n==7)
+    {
+car9=1;car19=1;car29=1;car39=1;car49=1;car59=1;car69=1;
+      car8=1;car18=1;car28=1;car38=1;car48=1;car58=1;car68=1;
+     }
+    if(n==6)
+    {
+car9=1;car19=1;car29=1;car39=1;car49=1;car59=1;
+      car8=1;car18=1;car28=1;car38=1;car48=1;car58=1;
+       car7=1;car17=1;car27=1;car37=1;car47=1;car57=1;
+     }
+    if(n==5)
+    {
+car9=1;car19=1;car29=1;car39=1;car49=1;
+      car8=1;car18=1;car28=1;car38=1;car48=1;
+       car7=1;car17=1;car27=1;car37=1;car47=1;
+       car6=1;car16=1;car26=1;car36=1;car46=1;
+     }
+    if(n==4)
+    {
+car9=1;car19=1;car29=1;car39=1;
+      car8=1;car18=1;car28=1;car38=1;
+       car7=1;car17=1;car27=1;car37=1;
+       car6=1;car16=1;car26=1;car36=1;
+      car5=1;car15=1;car25=1;car35=1;
+     }
+    if(n==3)
+    {
+car9=1;car19=1;car29=1;
+      car8=1;car18=1;car28=1;
+       car7=1;car17=1;car27=1;
+       car6=1;car16=1;car26=1;
+      car5=1;car15=1;car25=1;
+      car4=1;car14=1;car24=1;
+     }
+    if(n==2)
+    {
+car9=1;car19=1;
+      car8=1;car18=1;
+       car7=1;car17=1;
+       car6=1;car16=1;
+      car5=1;car15=1;
+      car4=1;car14=1;
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+car9=1;
+      car8=1;
+       car7=1;
+       car6=1;
+      car5=1;
+      car4=1;
+      car3=1;
+     }
+  }
+///////////////////////////
+  if(col==8)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+     }
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+    }
+    if(n==7)
+    {
+
+      car8=1;car18=1;car28=1;car38=1;car48=1;car58=1;car68=1;
+     }
+    if(n==6)
+    {
+
+      car8=1;car18=1;car28=1;car38=1;car48=1;car58=1;
+       car7=1;car17=1;car27=1;car37=1;car47=1;car57=1;
+     }
+    if(n==5)
+    {
+
+      car8=1;car18=1;car28=1;car38=1;car48=1;
+       car7=1;car17=1;car27=1;car37=1;car47=1;
+       car6=1;car16=1;car26=1;car36=1;car46=1;
+     }
+    if(n==4)
+    {
+
+      car8=1;car18=1;car28=1;car38=1;
+       car7=1;car17=1;car27=1;car37=1;
+       car6=1;car16=1;car26=1;car36=1;
+      car5=1;car15=1;car25=1;car35=1;
+     }
+    if(n==3)
+    {
+
+      car8=1;car18=1;car28=1;
+       car7=1;car17=1;car27=1;
+       car6=1;car16=1;car26=1;
+      car5=1;car15=1;car25=1;
+      car4=1;car14=1;car24=1;
+     }
+    if(n==2)
+    {
+
+      car8=1;car18=1;
+       car7=1;car17=1;
+       car6=1;car16=1;
+      car5=1;car15=1;
+      car4=1;car14=1;
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+
+      car8=1;
+       car7=1;
+       car6=1;
+      car5=1;
+      car4=1;
+      car3=1;
+     }
+  } 
+  ///////////////////////////
+  if(col==7)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2;  }
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+
+   
+     }
+    if(n==6)
+    {
+
+      
+       car7=1;car17=1;car27=1;car37=1;car47=1;car57=1;
+     }
+    if(n==5)
+    {
+
+    
+       car7=1;car17=1;car27=1;car37=1;car47=1;
+       car6=1;car16=1;car26=1;car36=1;car46=1;
+     }
+    if(n==4)
+    {
+
+       car7=1;car17=1;car27=1;car37=1;
+       car6=1;car16=1;car26=1;car36=1;
+      car5=1;car15=1;car25=1;car35=1;
+     }
+    if(n==3)
+    {
+
+       car7=1;car17=1;car27=1;
+       car6=1;car16=1;car26=1;
+      car5=1;car15=1;car25=1;
+      car4=1;car14=1;car24=1;
+     }
+    if(n==2)
+    {
+
+    
+       car7=1;car17=1;
+       car6=1;car16=1;
+      car5=1;car15=1;
+      car4=1;car14=1;
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+
+     
+       car7=1;
+       car6=1;
+      car5=1;
+      car4=1;
+      car3=1;
+     }
+  }
+  ///////////////////////////
+  if(col==6)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2;  
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;car97=2;}
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;
+      car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2; 
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+ car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2;
+   
+     }
+    if(n==7)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;
+ car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;
+      
+      
+     }
+    if(n==5)
+    {
+
+    
+       
+       car6=1;car16=1;car26=1;car36=1;car46=1;
+     }
+    if(n==4)
+    {
+
+       car6=1;car16=1;car26=1;car36=1;
+      car5=1;car15=1;car25=1;car35=1;
+     }
+    if(n==3)
+    {
+
+       
+       car6=1;car16=1;car26=1;
+      car5=1;car15=1;car25=1;
+      car4=1;car14=1;car24=1;
+     }
+    if(n==2)
+    {
+
+    
+     
+       car6=1;car16=1;
+      car5=1;car15=1;
+      car4=1;car14=1;
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+
+     
+      
+       car6=1;
+      car5=1;
+      car4=1;
+      car3=1;
+     }
+  }
+ 
+   ///////////////////////////
+  if(col==5)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2; 
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;car97=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2;car96=2;}
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2;
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;
+   
+     }
+    if(n==7)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;
+      
+      
+     }
+    if(n==6)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2;
+    
+     }
+    if(n==4)
+    {
+
+      
+       car6=1;car16=1;car26=1;car36=1;
+      car5=1;car15=1;car25=1;car35=1;
+     }
+    if(n==3)
+    {
+
+       
+      car5=1;car15=1;car25=1;
+      car4=1;car14=1;car24=1;
+     }
+    if(n==2)
+    {
+
+    
+     
+      
+      car5=1;car15=1;
+      car4=1;car14=1;
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+
+     
+     
+      car5=1;
+      car4=1;
+      car3=1;
+     }
+  }
+    ///////////////////////////
+  if(col==4)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2; 
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;car97=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2;car96=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2;car95=2;  
+    }
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2; car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2;
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;
+    car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;
+     }
+    if(n==7)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;
+       car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;
+      
+     }
+    if(n==6)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2;
+     }
+    if(n==5)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2
+    car6=2,car16=2,car26=2,car36=2,car46=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;
+      
+      
+     }
+    if(n==3)
+    {
+
+      car4=1;car14=1;car24=1;
+     }
+    if(n==2)
+    {
+
+
+      car4=1;car14=1;
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+
+      car4=1;
+      car3=1;
+     }
+  }
+  
+    ///////////////////////////
+  if(col==3)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2; 
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;car97=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2;car96=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2;car95=2;  
+       car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;car84=2;car94=2;  
+    }
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2; car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2; car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;car84=2;
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;
+    car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;
+     }
+    if(n==7)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;
+       car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;
+     }
+    if(n==6)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2;
+       car4=2,car14=2,car24=2,car34=2,car44=2;car54=2;
+     }
+    if(n==5)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2
+    car6=2,car16=2,car26=2,car36=2,car46=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;
+      
+     }
+    if(n==4)
+    {
+car10=2;car20=2;car30=2;car40=2;
+        car9=2;car19=2;car29=2;car39=2;
+      car8=2;car18=2;car28=2;car38=2;
+    car7=2,car17=2,car27=2,car37=2,
+    car6=2,car16=2,car26=2,car36=2,
+     car5=2,car15=2,car25=2,car35=2,
+      car4=2,car14=2,car24=2,car34=2;
+     
+     }
+    if(n==2)
+    {
+
+      car3=1;car13=1;
+     }
+     if(n==1)
+    {
+      car3=1;
+     }
+  }
+    ///////////////////////////
+  if(col==2)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2; 
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;car97=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2;car96=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2;car95=2;  
+       car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;car84=2;car94=2;  
+       car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;car73=2;car83=2;car93=2;  
+    }
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2; car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2; car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;car84=2; car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;car73=2;car83=2;
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;
+    car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;car73=2;
+     
+     }
+    if(n==7)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;
+       car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;
+      
+     }
+    if(n==6)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2;
+       car4=2,car14=2,car24=2,car34=2,car44=2;car54=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;car53=2;
+     }
+    if(n==5)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2
+    car6=2,car16=2,car26=2,car36=2,car46=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;
+     }
+    if(n==4)
+    {
+car10=2;car20=2;car30=2;car40=2;
+        car9=2;car19=2;car29=2;car39=2;
+      car8=2;car18=2;car28=2;car38=2;
+    car7=2,car17=2,car27=2,car37=2,
+    car6=2,car16=2,car26=2,car36=2,
+     car5=2,car15=2,car25=2,car35=2,
+      car4=2,car14=2,car24=2,car34=2;
+     car3=2,car13=2,car23=2,car33=2;
+     }
+    if(n==3)
+    {
+car10=2;car20=2;car30=2;
+        car9=2;car19=2;car29=2;
+      car8=2;car18=2;car28=2;
+    car7=2,car17=2,car27=2,
+    car6=2,car16=2,car26=2,
+     car5=2,car15=2,car25=2,
+      car4=2,car14=2,car24=2,
+     car3=2,car13=2,car23=2;
+     }
+    
+  }
+   if(col==1)
+  {
+    if(n==10)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;car100=2;
+      car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;car99=2;
+   car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;car98=2; 
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;car97=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2;car96=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2;car95=2;  
+       car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;car84=2;car94=2;  
+       car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;car73=2;car83=2;car93=2;  
+      car2=2,car12=2,car22=2,car32=2,car42=2;car52=2,car62=2;car72=2;car82=2;car92=2; 
+    }
+if(n==9)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;car90=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;car89=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;car88=2;    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,car87=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;car86=2; car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;car85=2; car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;car84=2; car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;car73=2;car83=2; car2=2,car12=2,car22=2,car32=2,car42=2;car52=2,car62=2;car72=2;car82=2;
+    }
+    if(n==8)
+    {car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;car80=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;car79=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;car78=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;car77=2,
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;car76=2;
+    car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;car75=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;car74=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;car73=2;
+      car2=2,car12=2,car22=2,car32=2,car42=2;car52=2,car62=2;car72=2;
+     }
+    if(n==7)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;car70=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;car69=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;car68=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;car67=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2,car66=2;
+       car5=2,car15=2,car25=2,car35=2,car45=2;car55=2,car65=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;car54=2,car64=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;car53=2,car63=2;
+     car2=2,car12=2,car22=2,car32=2,car42=2;car52=2,car62=2;
+     }
+    if(n==6)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;car60=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;car59=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;car58=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2,car57=2;
+    car6=2,car16=2,car26=2,car36=2,car46=2;car56=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;car55=2;
+       car4=2,car14=2,car24=2,car34=2,car44=2;car54=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;car53=2;
+       car2=2,car12=2,car22=2,car32=2,car42=2;car52=2;
+     }
+    if(n==5)
+    {
+car10=2;car20=2;car30=2;car40=2;car50=2;
+        car9=2;car19=2;car29=2;car39=2;car49=2;
+      car8=2;car18=2;car28=2;car38=2;car48=2;
+    car7=2,car17=2,car27=2,car37=2,car47=2
+    car6=2,car16=2,car26=2,car36=2,car46=2;
+     car5=2,car15=2,car25=2,car35=2,car45=2;
+      car4=2,car14=2,car24=2,car34=2,car44=2;
+      car3=2,car13=2,car23=2,car33=2,car43=2;
+       car2=2,car12=2,car22=2,car32=2,car42=2;
+     }
+    if(n==4)
+    {
+car10=2;car20=2;car30=2;car40=2;
+        car9=2;car19=2;car29=2;car39=2;
+      car8=2;car18=2;car28=2;car38=2;
+    car7=2,car17=2,car27=2,car37=2,
+    car6=2,car16=2,car26=2,car36=2,
+     car5=2,car15=2,car25=2,car35=2,
+      car4=2,car14=2,car24=2,car34=2;
+     car3=2,car13=2,car23=2,car33=2;
+       car2=2,car12=2,car22=2,car32=2;
+     }
+    if(n==3)
+    {
+car10=2;car20=2;car30=2;
+        car9=2;car19=2;car29=2;
+      car8=2;car18=2;car28=2;
+    car7=2,car17=2,car27=2,
+    car6=2,car16=2,car26=2,
+     car5=2,car15=2,car25=2,
+      car4=2,car14=2,car24=2,
+     car3=2,car13=2,car23=2;
+       car2=2,car12=2,car22=2;
+     }
+      if(n==2)
+    {
+car10=2;car20=2;
+        car9=2;car19=2;
+      car8=2;car18=2;
+    car7=2,car17=2,
+    car6=2,car16=2,
+     car5=2,car15=2,
+      car4=2,car14=2,
+     car3=2,car13=2,
+       car2=2,car12=2;
+     }
+  } 
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+function caramida(X,Y)
+{
+ 
+fill(culoare);
+      
+          rect(X, Y, w,h);
+          quad(X,Y, X+af,Y-af,X+w+af, Y-af, X+w , Y);//sus
+          quad(X+w,Y+h, X+w,Y, X+w+af, Y-af, X+w+af , Y+h-af);
+}
+//////////////////////////////////////////////////////////////////////////
+function curs(X,Y)
+{
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y&&mouseY<Y+h&&car1==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y&&mouseY<Y+h&&car2==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y&&mouseY<Y+h&&car3==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y&&mouseY<Y+h&&car4==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y&&mouseY<Y+h&&car5==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y&&mouseY<Y+h&&car6==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y&&mouseY<Y+h&&car7==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y&&mouseY<Y+h&&car8==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y&&mouseY<Y+h&&car9==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y&&mouseY<Y+h&&car10==1)       
+          cursor(HAND);   else
+ //////////////////////////////////////////////////////////////////           
+       if (mouseX>X+az&&mouseX<X+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car11==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60+az&&mouseX<X+60+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car12==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120+az&&mouseX<X+120+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car13==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180+az&&mouseX<X+180+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car14==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4+az&&mouseX<X+60*4+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car15==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5+az&&mouseX<X+60*5+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car16==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6+az&&mouseX<X+60*6+w+az&&mouseY>Y-20&&mouseY<Y-20+h&&car17==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7+az&&mouseX<X+60*7+az+w&&mouseY>Y-20&&mouseY<Y-20+h&&car18==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8+az&&mouseX<X+60*8+w+az&&mouseY>Y-20&&mouseY<Y-20+h&&car19==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+az+60*9&&mouseX<X+60*9+w+az&&mouseY>Y-20&&mouseY<Y-20+h&&car20==1)       
+          cursor(HAND); else
+////////////////////////////////////////////////////////////////////////     
+       if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car21==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car22==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car23==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car24==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car25==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car26==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car27==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car28==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car29==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*2&&mouseY<Y-20*2+h&&car30==1)       
+          cursor(HAND); else
+/////////////////////////////////////////////////////////////////////////    
+ if (mouseX>X+az&&mouseX<X+az+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car31==1)
+          cursor(HAND);   else 
+ if (mouseX>X+az+60&&mouseX<X+az+60+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car32==1)
+          cursor(HAND);   else 
+ if(mouseX>X+az+120&&mouseX<X+az+120+w&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car33==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car34==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4+az&&mouseX<X+60*4+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car35==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5+az&&mouseX<X+60*5+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car36==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6+az&&mouseX<X+60*6+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car37==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7+az&&mouseX<X+60*7+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car38==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8+az&&mouseX<X+60*8+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car39==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*9+az&&mouseX<X+60*9+w+az&&mouseY>Y-20*3&&mouseY<Y-20*3+h&&car40==1)       
+          cursor(HAND);         
+else /////////////////////////////////////////////////////////////////////////    
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car41==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car42==1)
+          cursor(HAND);   else 
+ if(mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car43==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car44==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car45==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car46==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car47==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car48==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car49==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*4&&mouseY<Y-20*4+h&&car50==1)       
+          cursor(HAND);                
+ else /////////////////////////////////////////////////////////////////////////    
+ if (mouseX>X+az&&mouseX<X+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car51==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60+az&&mouseX<X+60+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car52==1)
+          cursor(HAND);   else 
+ if(mouseX>X+120+az&&mouseX<X+az+120+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car53==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180+az&&mouseX<X+180+az+w&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car54==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4+az&&mouseX<X+60*4+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car55==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5+az&&mouseX<X+60*5+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car56==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6+az&&mouseX<X+60*6+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car57==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7+az&&mouseX<X+60*7+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car58==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8+az&&mouseX<X+60*8+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car59==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*9+az&&mouseX<X+60*9+w+az&&mouseY>Y-20*5&&mouseY<Y-20*5+h&&car60==1)       
+          cursor(HAND); else
+ ////////////////////////////////////////////////////////////////////// 
+     if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car61==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car62==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car63==1)
+          cursor(HAND);   else 
+ if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car64==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car65==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car66==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car67==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car68==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car69==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*6&&mouseY<Y-20*6+h&&car70==1)       
+          cursor(HAND); 
+   else //////////////////////////////////////////////////////////////////           
+     if (mouseX>X+az&&mouseX<X+az+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car71==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60+az&&mouseX<X+60+w+az&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car72==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120+az&&mouseX<X+120+az+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car73==1)
+          cursor(HAND);   else 
+if (mouseX>X+180+az&&mouseX<X+180+az+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car74==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4+az&&mouseX<X+60*4+az+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car75==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5+az&&mouseX<X+60*5+az+w&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car76==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6+az&&mouseX<X+60*6+w+az&&mouseY>Y-20*7&&mouseY<Y-20*7*7+h&&car77==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7+az&&mouseX<X+60*7+w+az&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car78==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8+az&&mouseX<X+60*8+w+az&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car79==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9+az&&mouseX<X+60*9+w+az&&mouseY>Y-20*7&&mouseY<Y-20*7+h&&car80==1)       
+          cursor(HAND); else
+  //////////////////////////////////////////////////////////////////        
+ if (mouseX>X&&mouseX<X+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car81==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60&&mouseX<X+60+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car82==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120&&mouseX<X+120+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car83==1)
+          cursor(HAND);   else 
+if (mouseX>X+180&&mouseX<X+180+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car84==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4&&mouseX<X+60*4+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car85==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*5&&mouseX<X+60*5+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car86==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*6&&mouseX<X+60*6+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car87==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7&&mouseX<X+60*7+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car88==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8&&mouseX<X+60*8+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car89==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9&&mouseX<X+60*9+w&&mouseY>Y-20*8&&mouseY<Y-20*8+h&&car90==1)       
+          cursor(HAND); 
+
+  else
+  ////////////////////////////////////////////////////////////////// 
+    //////////////////////////////////////////////////////////////////           
+       if (mouseX>X+az&&mouseX<X+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car91==1)
+          cursor(HAND);   else 
+ if (mouseX>X+60+az&&mouseX<X+60+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car92==1)
+          cursor(HAND);   else 
+ if (mouseX>X+120+az&&mouseX<X+120+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car93==1)
+          cursor(HAND);   else 
+if (mouseX>X+180+az&&mouseX<X+180+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car94==1)
+          cursor(HAND);   else 
+if (mouseX>X+60*4+az&&mouseX<X+60*4+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car95==1)       
+         cursor(HAND);    else 
+ if (mouseX>X+60*5+az&&mouseX<X+60*5+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car96==1)     cursor(HAND);   else
+
+ if (mouseX>X+60*6+az&&mouseX<X+60*6+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car97==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*7+az&&mouseX<X+60*7+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car98==1)       
+          cursor(HAND);   else 
+ if (mouseX>X+60*8+az&&mouseX<X+60*8+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car99==1)       
+          cursor(HAND);   else 
+            if (mouseX>X+60*9+az&&mouseX<X+60*9+w+az&&mouseY>Y-20*9&&mouseY<Y-20*9+h&&car100==1)       
+          cursor(HAND); 
+        
+       
+ else cursor(CROSS);}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function draw() {
+    background(50, 89, 100);
+   curs(X1,Y);
+ 
+////////////////////////primul strat jos////////////////////////////////
+   if(car1==1)	 caramida(X1,Y);
+  else  if(car1==0)	
+  { 
+    mk0.move();
+   mk0.display();
+  }
+   if(car2==1)	 caramida(X2,Y);
+  else if(car2==0)
+  {
+    mk1.move();
+     mk1.display();
+  }
+     if(car3==1)	 caramida(X3,Y); 
+  else if(car3==0)
+  { 
+    mk2.move();
+   mk2.display();
+  }
+   if(car4==1)	 caramida(X4,Y);
+    else if(car4==0)
+  {
+    mk3.move();
+   mk3.display();
+  }
+  
+   if(car5==1)	 caramida(X5,Y);
+    else if(car5==0)
+  {
+    mk4.move();
+   mk4.display();
+  }
+   if(car6==1)	 caramida(X6,Y);
+   else if(car6==0)
+  { 
+    mk5.move();  
+   mk5.display();
+  }
+     if(car7==1)	 caramida(X7,Y);
+   else if(car7==0)
+  { 
+    mk6.move();  
+   mk6.display();
+  }
+   if(car8==1)	 caramida(X8,Y);
+   else if(car8==0)
+  {
+    mk7.move(); 
+   mk7.display();
+  }
+ 
+    if(car9==1)	 caramida(X9,Y);
+   else if(car9==0)
+  {
+    mk8.move(); 
+   mk8.display();
+  }
+   if(car10==1)	 caramida(X10,Y);
+   else if(car10==0)
+  { 
+    mk9.move();
+   mk9.display();
+  }
+  //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 2 strat ////////////////////////////////
+   if(car11==1)	 caramida(X1+az,Y1);
+   else if(car11==0)
+  {
+    mk10.move();
+     mk10.display();
+  }
+   if(car12==1)	 caramida(X2+az,Y1);
+   else if(car12==0)
+  {
+    mk11.move();
+     mk11.display();
+  }
+     if(car13==1)	 caramida(X3+az,Y1);
+   else if(car13==0)
+  {
+    mk12.move();
+     mk12.display();
+  }
+   if(car14==1)	 caramida(X4+az,Y1);
+   else if(car14==0)
+  {
+    mk13.move();
+     mk13.display();
+  }
+  
+   if(car15==1)	 caramida(X5+az,Y1);
+   else if(car15==0)
+  {
+    mk14.move();
+     mk14.display();
+  }
+   if(car16==1)	 caramida(X6+az,Y1);
+   else if(car16==0)
+  {
+    mk15.move();
+     mk15.display();
+  }
+     if(car17==1)	 caramida(X7+az,Y1);
+   else if(car17==0)
+  {
+    mk16.move();
+     mk16.display();
+  }
+   if(car18==1)	 caramida(X8+az,Y1);
+   else if(car18==0)
+  {
+    mk17.move();
+     mk17.display();
+  }
+ 
+    if(car19==1)	 caramida(X9+az,Y1);
+   else if(car19==0)
+  {
+    mk18.move();
+     mk18.display();
+  }
+   if(car20==1)	 caramida(X10+az,Y1);
+   else if(car20==0)
+  {
+    mk19.move();
+     mk19.display();
+  }
+  //////////////////////////////////////////////////////////////////////
+   //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 3 strat ////////////////////////////////
+   if(car21==1)	 caramida(X1,Y2);
+  else if(car21==0)
+  { 
+    mk20.move();
+   mk20.display();
+  }
+   if(car22==1)	 caramida(X2,Y2);
+  else if(car22==0)
+  { 
+    mk21.move();
+   mk21.display();
+  }
+     if(car23==1)	 caramida(X3,Y2);
+  else if(car23==0)
+  { 
+    mk22.move();
+   mk22.display();
+  }
+   if(car24==1)	 caramida(X4,Y2);
+  else if(car24==0)
+  { 
+    mk23.move();
+   mk23.display();
+  }
+  
+   if(car25==1)	 caramida(X5,Y2);
+  else if(car25==0)
+  { 
+    mk24.move();
+   mk24.display();
+  }
+   if(car26==1)	 caramida(X6,Y2);
+  else if(car26==0)
+  { 
+    mk25.move();
+   mk25.display();
+  }
+     if(car27==1)	 caramida(X7,Y2);
+  else if(car27==0)
+  { 
+    mk26.move();
+   mk26.display();
+  }
+   if(car28==1)	 caramida(X8,Y2);
+  else if(car28==0)
+  { 
+    mk27.move();
+   mk27.display();
+  }
+ 
+    if(car29==1)	 caramida(X9,Y2);
+  else if(car29==0)
+  { 
+    mk28.move();
+   mk28.display();
+  }
+   if(car30==1)	 caramida(X10,Y2);
+  else if(car30==0)
+  { 
+    mk29.move();
+   mk29.display();
+  }
+  //////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 4 strat ////////////////////////////////
+   if(car31==1)	 caramida(X1+az,Y3);
+    else if(car31==0)
+  {
+    mk30.move();
+   mk30.display();
+  }
+  
+   if(car32==1)	 caramida(X2+az,Y3);
+    else if(car32==0)
+  {
+    mk31.move();
+   mk31.display();
+  }
+  
+     if(car33==1)	 caramida(X3+az,Y3);
+    else if(car33==0)
+  {
+    mk32.move();
+   mk32.display();
+  }
+  
+   if(car34==1)	 caramida(X4+az,Y3);
+    else if(car34==0)
+  {
+    mk33.move();
+   mk33.display();
+  }
+  
+  
+   if(car35==1)	 caramida(X5+az,Y3);
+    else if(car35==0)
+  {
+    mk34.move();
+   mk34.display();
+  }
+  
+   if(car36==1)	 caramida(X6+az,Y3);
+    else if(car36==0)
+  {
+    mk35.move();
+   mk35.display();
+  }
+  
+     if(car37==1)	 caramida(X7+az,Y3);
+    else if(car37==0)
+  {
+    mk36.move();
+   mk36.display();
+  }
+  
+   if(car38==1)	 caramida(X8+az,Y3);
+    else if(car38==0)
+  {
+    mk37.move();
+   mk37.display();
+  }
+  
+ 
+    if(car39==1)	 caramida(X9+az,Y3);
+    else if(car39==0)
+  {
+    mk38.move();
+   mk38.display();
+  }
+  
+   if(car40==1)	 caramida(X10+az,Y3);
+     else if(car40==0)
+  {
+    mk39.move();
+   mk39.display();
+  }
+  //////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 5 strat ////////////////////////////////
+   if(car41==1)	 caramida(X1,Y4);
+    else if(car41==0)
+  {
+    mk40.move();
+   mk40.display();
+  }
+  
+   if(car42==1)	 caramida(X2,Y4);
+    else if(car42==0)
+  {
+    mk41.move();
+   mk41.display();
+  }
+     if(car43==1)	 caramida(X3,Y4);
+    else if(car43==0)
+  {
+    mk42.move();
+   mk42.display();
+  }
+   if(car44==1)	 caramida(X4,Y4);
+    else if(car44==0)
+  {
+    mk43.move();
+   mk43.display();
+  }
+   if(car45==1)	 caramida(X5,Y4);
+    else if(car45==0)
+  {
+    mk44.move();
+   mk44.display();
+  }
+   if(car46==1)	 caramida(X6,Y4);
+    else if(car46==0)
+  {
+    mk45.move();
+   mk45.display();
+  }
+     if(car47==1)	 caramida(X7,Y4);
+    else if(car47==0)
+  {
+    mk46.move();
+   mk46.display();
+  }
+   if(car48==1)	 caramida(X8,Y4);
+    else if(car48==0)
+  {
+    mk47.move();
+   mk47.display();
+  }
+ 
+    if(car49==1)	 caramida(X9,Y4);
+    else if(car49==0)
+  {
+    mk48.move();
+   mk48.display();
+  }
+   if(car50==1)	 caramida(X10,Y4);
+    else if(car50==0)
+  {
+    mk49.move();
+   mk49.display();
+  }
+   //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 6 strat ////////////////////////////////
+   if(car51==1)	 caramida(X1+az,Y5);
+    else if(car51==0)
+  {
+    mk50.move();
+   mk50.display();
+  }
+   if(car52==1)	 caramida(X2+az,Y5);
+    else if(car52==0)
+  {
+    mk51.move();
+   mk51.display();
+  }
+     if(car53==1)	 caramida(X3+az,Y5);
+    else if(car53==0)
+  {
+    mk52.move();
+   mk52.display();
+  }
+   if(car54==1)	 caramida(X4+az,Y5);
+    else if(car54==0)
+  {
+    mk53.move();
+   mk53.display();
+  }
+   if(car55==1)	 caramida(X5+az,Y5);
+    else if(car55==0)
+  {
+    mk54.move();
+   mk54.display();
+  }
+   if(car56==1)	 caramida(X6+az,Y5);
+     else if(car56==0)
+  {
+    mk55.move();
+   mk55.display();
+  }
+     if(car57==1)	 caramida(X7+az,Y5);
+      else if(car57==0)
+  {
+    mk56.move();
+   mk56.display();
+  }
+   if(car58==1)	 caramida(X8+az,Y5);
+       else if(car58==0)
+  {
+    mk57.move();
+   mk57.display();
+  }
+ 
+    if(car59==1)	 caramida(X9+az,Y5);
+       else if(car59==0)
+  {
+    mk58.move();
+   mk58.display();
+  }
+   if(car60==1)	 caramida(X10+az,Y5);
+      else if(car60==0)
+  {
+    mk59.move();
+   mk59.display();
+  }
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 7 strat ////////////////////////////////
+   if(car61==1)	 caramida(X1,Y6);
+       else if(car61==0)
+  {
+    mk60.move();
+   mk60.display();
+  }
+   if(car62==1)	 caramida(X2,Y6);
+       else if(car62==0)
+  {
+    mk61.move();
+   mk61.display();
+  }
+     if(car63==1)	 caramida(X3,Y6);
+       else if(car63==0)
+  {
+    mk62.move();
+   mk62.display();
+  }
+   if(car64==1)	 caramida(X4,Y6);
+       else if(car64==0)
+  {
+    mk63.move();
+   mk63.display();
+  }
+  
+   if(car65==1)	 caramida(X5,Y6);
+       else if(car65==0)
+  {
+    mk64.move();
+   mk64.display();
+  }
+   if(car66==1)	 caramida(X6,Y6);
+       else if(car66==0)
+  {
+    mk65.move();
+   mk65.display();
+  }
+     if(car67==1)	 caramida(X7,Y6);
+       else if(car67==0)
+  {
+    mk66.move();
+   mk66.display();
+  }
+   if(car68==1)	 caramida(X8,Y6);
+      else if(car68==0)
+  {
+    mk67.move();
+   mk67.display();
+  }
+    if(car69==1)	 caramida(X9,Y6);
+       else if(car69==0)
+  {
+    mk68.move();
+   mk68.display();
+  }
+   if(car70==1)	 caramida(X10,Y6);
+       else if(car70==0)
+  {
+    mk69.move();
+   mk69.display();
+  }
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 8 strat ////////////////////////////////
+   if(car71==1)	 caramida(X1+az,Y7);
+       else if(car71==0)
+  {
+    mk70.move();
+   mk70.display();
+  }
+   if(car72==1)	 caramida(X2+az,Y7);
+        else if(car72==0)
+  {
+    mk71.move();
+   mk71.display();
+  }
+     if(car73==1)	 caramida(X3+az,Y7);
+        else if(car73==0)
+  {
+    mk72.move();
+   mk72.display();
+  }
+   if(car74==1)	 caramida(X4+az,Y7);
+        else if(car74==0)
+  {
+    mk73.move();
+   mk73.display();
+  }
+  
+   if(car75==1)	 caramida(X5+az,Y7);
+        else if(car75==0)
+  {
+    mk74.move();
+   mk74.display();
+  }
+   if(car76==1)	 caramida(X6+az,Y7);
+        else if(car76==0)
+  {
+    mk75.move();
+   mk75.display();
+  }
+     if(car77==1)	 caramida(X7+az,Y7);
+         else if(car77==0)
+  {
+    mk76.move();
+   mk76.display();
+  }
+
+   if(car78==1)	 caramida(X8+az,Y7);
+       else if(car78==0)
+  {
+    mk77.move();
+   mk77.display();
+  }
+ 
+    if(car79==1)	 caramida(X9+az,Y7);
+       else if(car79==0)
+  {
+    mk78.move();
+   mk78.display();
+  }
+   if(car80==1)	 caramida(X10+az,Y7);
+       else if(car80==0)
+  {
+    mk79.move();
+   mk79.display();
+  }
+  
+    //////////////////////////////////////////////////////////////////////
+  ////////////////////////al 9 strat ////////////////////////////////
+   if(car81==1)	 caramida(X1,Y8);
+       else if(car81==0)
+  {
+    mk80.move();
+   mk80.display();
+  }
+   if(car82==1)	 caramida(X2,Y8);
+       else if(car82==0)
+  {
+    mk81.move();
+   mk81.display();
+  }
+     if(car83==1)	 caramida(X3,Y8);
+       else if(car83==0)
+  {
+    mk82.move();
+   mk82.display();
+  }
+   if(car84==1)	 caramida(X4,Y8);
+       else if(car84==0)
+  {
+    mk83.move();
+   mk83.display();
+  }
+  
+   if(car85==1)	 caramida(X5,Y8);
+       else if(car85==0)
+  {
+    mk84.move();
+   mk84.display();
+  }
+   if(car86==1)	 caramida(X6,Y8);
+       else if(car86==0)
+  {
+    mk85.move();
+   mk85.display();
+  }
+     if(car87==1)	 caramida(X7,Y8);
+       else if(car87==0)
+  {
+    mk86.move();
+   mk86.display();
+  }
+   if(car88==1)	 caramida(X8,Y8);
+       else if(car88==0)
+  {
+    mk87.move();
+   mk87.display();
+  }
+ 
+    if(car89==1)	 caramida(X9,Y8);
+       else if(car89==0)
+  {
+    mk88.move();
+   mk88.display();
+  }
+   if(car90==1)	 caramida(X10,Y8);
+         else if(car90==0)
+  {
+    mk89.move();
+   mk89.display();
+  } //////////////////////////////////////////////////////////////////////
+  ////////////////////////ultimul strat ////////////////////////////////
+   if(car91==1)	 caramida(X1+az,Y9);
+       else if(car91==0)
+  {
+    mk90.move();
+   mk90.display();
+  }
+   if(car92==1)	 caramida(X2+az,Y9);
+       else if(car92==0)
+  {
+    mk91.move();
+   mk91.display();
+  }
+     if(car93==1)	 caramida(X3+az,Y9);
+        else if(car93==0)
+  {
+    mk92.move();
+   mk92.display();
+  }
+  
+   if(car94==1)	 caramida(X4+az,Y9);
+        else if(car94==0)
+  {
+    mk93.move();
+   mk93.display();
+  }
+  
+  
+   if(car95==1)	 caramida(X5+az,Y9);
+        else if(car95==0)
+  {
+    mk94.move();
+   mk94.display();
+  }
+  
+   if(car96==1)	 caramida(X6+az,Y9);
+        else if(car96==0)
+  {
+    mk95.move();
+   mk95.display();
+  }
+  
+     if(car97==1)	 caramida(X7+az,Y9);
+        else if(car97==0)
+  {
+    mk96.move();
+   mk96.display();
+  }
+  
+   if(car98==1)	 caramida(X8+az,Y9);
+        else if(car98==0)
+  {
+    mk97.move();
+   mk97.display();
+  }
+  
+ 
+    if(car99==1)	 caramida(X9+az,Y9);
+        else if(car99==0)
+  {
+    mk98.move();
+   mk98.display();
+  }
+  
+   if(car100==1)	 caramida(X10+az,Y9);
+        else if(car100==0)
+  {
+    mk99.move();
+   mk99.display();
+  }
+  
+  //////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////
+ }
+function mousePressed()
+{ ////////////////////////caramizi primu strat////////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car1==1)car1=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car2==1)car2=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car3==1)car3=0; redraw();}
+  
+  if (mouseX>X4&&mouseX<X4+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car4==1)car4=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car5==1)car5=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car6==1)car6=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car7==1)car7=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car8==1)car8=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car9==1)car9=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y&&mouseY<Y+h)
+  {if(car10==1)car10=0; redraw();}
+////////////////////////////////////////////////////////////////////////// ////////////////////////////caramizi al 2 strat/////////////////////////
+  if (mouseX>X1+az&&mouseX<X1+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car11==1)car11=0; redraw();
+  }
+   if (mouseX>X2+az&&mouseX<X2+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car12==1)car12=0; redraw();}
+  
+   if (mouseX>X3+az&&mouseX<X3+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car13==1)car13=0; redraw();}
+  
+   if (mouseX>X4+az&&mouseX<X4+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car14==1)car14=0; redraw();}
+  
+   if (mouseX>X5+az&&mouseX<X5+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car15==1)car15=0; redraw();}
+  
+   if (mouseX>X6+az&&mouseX<X6+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car16==1)car16=0; redraw();}
+  
+   if (mouseX>X7+az&&mouseX<X7+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car17==1)car17=0; redraw();}
+  
+  if (mouseX>X8+az&&mouseX<X8+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car18==1)car18=0; redraw();}
+  
+  if (mouseX>X9+az&&mouseX<X9+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car19==1)car19=0; redraw();}
+  
+  if (mouseX>X10+az&&mouseX<X10+az+w&&mouseY>Y1&&mouseY<Y1+h)
+  {if(car20==1)car20=0; redraw();}
+  
+  /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 3 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car21==1)car21=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car22==1)car22=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car23==1)car23=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car24==1)car24=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car25==1)car25=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car26==1)car26=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car27==1)car27=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car28==1)car28=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car29==1)car29=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y2&&mouseY<Y2+h)
+  {if(car30==1)car30=0; redraw();}
+  
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 4 strat/////////////////////////
+  if (mouseX>X1+az&&mouseX<X1+az+w&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car31==1)car31=0; redraw();
+  }
+   if (mouseX>X2+az&&mouseX<X2+w+az&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car32==1)car32=0; redraw();}
+  
+   if (mouseX>X3+az&&mouseX<X3+w+az&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car33==1)car33=0; redraw();}
+  
+   if (mouseX>X4+az&&mouseX<X4+w+az&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car34==1)car34=0; redraw();}
+  
+   if (mouseX>X5+az&&mouseX<X5+w+az&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car35==1)car35=0; redraw();}
+  
+   if (mouseX>X6+az&&mouseX<X6+az+w&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car36==1)car36=0; redraw();}
+  
+   if (mouseX>X7+az&&mouseX<X7+w+az&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car37==1)car37=0; redraw();}
+  
+  if (mouseX>X8+az&&mouseX<X8+az+w&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car38==1)car38=0; redraw();}
+  
+  if (mouseX>X9+az&&mouseX<X9+az+w&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car39==1)car39=0; redraw();}
+  
+  if (mouseX>X10+az&&mouseX<X10+az+w&&mouseY>Y3&&mouseY<Y3+h)
+  {if(car40==1)car40=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 5 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car41==1)car41=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car42==1)car42=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car43==1)car43=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car44==1)car44=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car45==1)car45=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car46==1)car46=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car47==1)car47=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car48==1)car48=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car49==1)car49=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y4&&mouseY<Y4+h)
+  {if(car50==1)car50=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 6 strat/////////////////////////
+  if (mouseX>X1+az&&mouseX<X1+az+w&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car51==1)car51=0; redraw();
+  }
+   if (mouseX>X2+az&&mouseX<X2+az+w&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car52==1)car52=0; redraw();}
+  
+   if (mouseX>X3+az&&mouseX<X3+az+w&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car53==1)car53=0; redraw();}
+  
+   if (mouseX>X4+az&&mouseX<X4+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car54==1)car54=0; redraw();}
+  
+   if (mouseX>X5+az&&mouseX<X5+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car55==1)car55=0; redraw();}
+  
+   if (mouseX>X6+az&&mouseX<X6+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car56==1)car56=0; redraw();}
+  
+   if (mouseX>X7+az&&mouseX<X7+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car57==1)car57=0; redraw();}
+  
+  if (mouseX>X8+az&&mouseX<X8+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car58==1)car58=0; redraw();}
+  
+  if (mouseX>X9+az&&mouseX<X9+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car59==1)car59=0; redraw();}
+  
+  if (mouseX>X10+az&&mouseX<X10+w+az&&mouseY>Y5&&mouseY<Y5+h)
+  {if(car60==1)car60=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 7 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car61==1)car61=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car62==1)car62=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car63==1)car63=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car64==1)car64=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car65==1)car65=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car66==1)car66=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car67==1)car67=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car68==1)car68=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car69==1)car69=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y6&&mouseY<Y6+h)
+  {if(car70==1)car70=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 8 strat/////////////////////////
+  if (mouseX>X1+az&&mouseX<X1+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car71==1)car71=0; redraw();
+  }
+   if (mouseX>X2+az&&mouseX<X2+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car72==1)car72=0; redraw();}
+  
+   if (mouseX>X3+az&&mouseX<X3+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car73==1)car73=0; redraw();}
+  
+   if (mouseX>X4+az&&mouseX<X4+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car74==1)car74=0; redraw();}
+  
+   if (mouseX>X5+az&&mouseX<X5+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car75==1)car75=0; redraw();}
+  
+   if (mouseX>X6+az&&mouseX<X6+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car76==1)car76=0; redraw();}
+  
+   if (mouseX>X7+az&&mouseX<X7+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car77==1)car77=0; redraw();}
+  
+  if (mouseX>X8+az&&mouseX<X8+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car78==1)car78=0; redraw();}
+  
+  if (mouseX>X9+az&&mouseX<X9+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car79==1)car79=0; redraw();}
+  
+  if (mouseX>X10+az&&mouseX<X10+w+az&&mouseY>Y7&&mouseY<Y7+h)
+  {if(car80==1)car80=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////caramizi al 9 strat/////////////////////////
+  if (mouseX>X1&&mouseX<X1+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car81==1)car81=0; redraw();
+  }
+   if (mouseX>X2&&mouseX<X2+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car82==1)car82=0; redraw();}
+  
+   if (mouseX>X3&&mouseX<X3+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car83==1)car83=0; redraw();}
+  
+   if (mouseX>X4&&mouseX<X4+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car84==1)car84=0; redraw();}
+  
+   if (mouseX>X5&&mouseX<X5+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car85==1)car85=0; redraw();}
+  
+   if (mouseX>X6&&mouseX<X6+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car86==1)car86=0; redraw();}
+  
+   if (mouseX>X7&&mouseX<X7+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car87==1)car87=0; redraw();}
+  
+  if (mouseX>X8&&mouseX<X8+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car88==1)car88=0; redraw();}
+  
+  if (mouseX>X9&&mouseX<X9+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car89==1)car89=0; redraw();}
+  
+  if (mouseX>X10&&mouseX<X10+w&&mouseY>Y8&&mouseY<Y8+h)
+  {if(car90==1)car90=0; redraw();}
+   
+ /////////////////////////////////////////////////////////////////////
+  ///////////////////////////ultimul strat/////////////////////////
+  if (mouseX>X1+az&&mouseX<X1+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car91==1)car91=0; redraw();
+  }
+   if (mouseX>X2+az&&mouseX<X2+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car92==1)car92=0; redraw();}
+  
+   if (mouseX>X3+az&&mouseX<X3+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car93==1)car93=0; redraw();}
+  
+   if (mouseX>X4+az&&mouseX<X4+az+w&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car94==1)car94=0; redraw();}
+  
+   if (mouseX>X5+az&&mouseX<X5+az+w&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car95==1)car95=0; redraw();}
+  
+   if (mouseX>X6+az&&mouseX<X6+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car96==1)car96=0; redraw();}
+  
+   if (mouseX>X7+az&&mouseX<X7+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car97==1)car97=0; redraw();}
+  
+  if (mouseX>X8+az&&mouseX<X8+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car98==1)car98=0; redraw();}
+  
+  if (mouseX>X9+az&&mouseX<X9+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car99==1)car99=0; redraw();}
+  
+  if (mouseX>X10+az&&mouseX<X10+w+az&&mouseY>Y9&&mouseY<Y9+h)
+  {if(car100==1)car100=0; redraw();}
+  
+  ///////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}
+function tter(a1,b1)
+{
+  this.x = a1;
+  this.y = b1;
+
+
+  this.move = function() 
+  {
+
+   if(this.x<a1+10&&this.y>b1-15)
+   {
+     this.x +=1.7;
+   this.y -= 1.7;
+   }
+  };
+     this.display = function() 
+     {  fill("lightgray");
+     rect(this.x, this.y, w,h);
+  quad(this.x+w,this.y+h, this.x+w,this.y, this.x+w+af, this.y-af, this.x+w+af , this.y+h-af);
+    quad(this.x,this.y, this.x+af,this.y-af,this.x+w+af, this.y-af, this.x+w , this.y);
+     };
+  };
+ 
